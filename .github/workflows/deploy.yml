@@ -1,0 +1,40 @@
+name: Github demo app CI/CD pipeline
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  dev-deploy:
+    if: github.ref == 'refs/heads/dev'
+    name: Deploy code on DEV Server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the files
+        uses: actions/checkout@v2
+
+      - name: Deploy to Dev Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY_DEV }}
+          ARGS: >-
+            -rltgoDzvO
+            --exclude='/.env'
+            --exclude='/bootstrap/cache'
+            --del
+          REMOTE_HOST: ${{ secrets.HOST_DEV }}
+          REMOTE_USER: ${{ secrets.USERNAME_DEV }}
+          TARGET: ${{ secrets.TARGET_DIR_DEV }}
+          EXCLUDE: "/bootstrap/cache, /.env"
+
+      # - name: Restarting Docker
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     key: ${{ secrets.SSH_KEY_DEV }}
+      #     host: ${{ secrets.HOST_DEV }}
+      #     username: ${{ secrets.USERNAME_DEV }}
+      #     script: |
+      #       cd ${{ secrets.TARGET_DIR_DEV }}
+      #       chmod a+rwx docker-restart.sh
+      #       ./docker-restart.sh dev
