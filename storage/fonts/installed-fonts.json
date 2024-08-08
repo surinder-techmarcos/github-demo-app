@@ -1,0 +1,26 @@
+{
+    "avenir": {
+        "normal": "avenir_normal_d0b3a235dbf5f0eb5887112e264230b8"
+    },
+    "avenirheavy": {
+        "normal": "avenirheavy_normal_f9d2afcd6dcfa9e28ce8ccec4a60c82b"
+    },
+    "avenirblack": {
+        "normal": "avenirblack_normal_a74899a2e0baeefee2610b013255bf5b"
+    },
+    "helvetica": {
+        "normal": "helvetica_normal_af72482cff1b92673e96adcf18617cd8",
+        "bold": "\/var\/www\/InvoiceGenerator-Backend\/storage\/fonts\/helvetica_bold_71f848aac3b25a45f22baab0ca43fa93",
+        "italic": "D:\\invoice\\InvoiceGenerator-Backend\\vendor\\dompdf\\dompdf\/lib\/fonts\/Helvetica-Oblique",
+        "bold_italic": "D:\\invoice\\InvoiceGenerator-Backend\\vendor\\dompdf\\dompdf\/lib\/fonts\/Helvetica-BoldOblique"
+    },
+    "times new roman cyr": {
+        "bold": "\/var\/www\/InvoiceGenerator-Backend\/storage\/fonts\/times_new_roman_cyr_bold_1c1b822d4fe0771abeb6a9904ec6a019",
+        "normal": "times_new_roman_cyr_normal_8a7d2a123223dce2e467d024a2bec22d"
+    },
+    "arial": {
+        "normal": "\/var\/www\/InvoiceGenerator-Backend\/storage\/fonts\/arial_normal_828394f15120a0ab46c1f1be034f099a",
+        "500": "\/var\/www\/InvoiceGenerator-Backend\/storage\/fonts\/arial_500_842992c95c4da52ac21c7de3c4340ca9",
+        "bold": "arial_bold_c12c0e09cb3292b67a08f8fc506ec999"
+    }
+}
